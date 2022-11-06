@@ -3,8 +3,7 @@ import os
 import face_recognition
 import numpy as np
 
-#get unknown image
-unknown_image = face_recognition.load_image_file("unknown.jpg")
+
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
@@ -77,6 +76,12 @@ while True:
         cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
         font = cv2.FONT_HERSHEY_DUPLEX
         cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
+
+    #save the result image to the Tested folder
+    cv2.imwrite("Tested/test.jpg", frame)
+    
+
+
 
     # Display the resulting image
     cv2.imshow('Video', frame)
