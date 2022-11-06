@@ -79,7 +79,9 @@ while True:
 
     #save the result image to the Tested folder
     cv2.imwrite("Tested/test.jpg", frame)
-    
+
+    #tested
+
 
 
 
