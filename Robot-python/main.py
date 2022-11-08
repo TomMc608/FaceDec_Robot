@@ -5,7 +5,7 @@ import numpy as np
 
 
 # Get a reference to webcam #0 (the default one)
-video_capture = cv2.VideoCapture(0)
+video_capture = cv2.VideoCapture("/dev/video0", cv2.CAP_V4L)
 
 #loop over all the images in the folder and put them in a list
 known_face_encodings = []
