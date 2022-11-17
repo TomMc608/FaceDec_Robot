@@ -88,11 +88,7 @@ while True:
     # Display the resulting image
     cv2.imshow('Video', frame)
 
-    # Hit 'q' on the keyboard to quit!
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        video_capture.release()
-        cv2.destroyAllWindows()
-        break
+    cv2.waitKey(0)
 
 # Release handle to the webcam
 
